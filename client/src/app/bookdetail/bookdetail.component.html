@@ -1,0 +1,30 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Book Details</h1>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-4">
+    <h1>{{book.title}}</h1>
+    <p>{{book.description}}</p>
+    <ul class="list-group" >
+      <li class="list-group-item"><span class="badge badge-success">Author:</span> {{book.author}}</li>
+      <li class="list-group-item"><span class="badge badge-success">Publisher:</span> {{book.publisher}}</li>
+      <li class="list-group-item"><span class="badge badge-success">Genre:</span> {{book.genre}}</li>
+      <li class="list-group-item"><span class="badge badge-success">Pages:</span> {{book.pages}}</li>
+      
+    </ul>    
+  </div>
+
+  <div class="col-lg-3">
+    <img src="{{book.image_url}}"/>
+  </div>
+  <div class="col-lg-4">
+      <a class="btn btn-success" href="{{book.buy_url}}" target="_blank">Buy Now</a>&nbsp;&nbsp;&nbsp;
+      <a class="btn btn-success" href="/books" (click)="deleteBook();">Delete Book</a>&nbsp;&nbsp;&nbsp;
+      <a class="btn btn-success" (click)="editBook();">Edit Book</a>&nbsp;&nbsp;&nbsp;
+      <a class="btn btn-success" href="/books">Go Back</a>
+      
+  </div>
+</div>
